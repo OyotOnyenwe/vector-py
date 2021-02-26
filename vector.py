@@ -16,6 +16,8 @@ dirA2 = str(input("of? "))
 
 # Convert Angle to a value between 0 and 360
 
+
+# Test recogniton of directions
 if dirA1 == "N":
     print("north")
 elif dirA1 == "S":
