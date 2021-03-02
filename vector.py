@@ -17,9 +17,55 @@ angleB = float(input("What is the angle of the first vector in degrees? "))
 dirB1 = str(input("What direction? "))
 dirB2 = str(input("of? "))
 
+# Convert to radians
+
+radians(angleA)
+radians(angleB)
+
+# Convert direction
+
+if dirA1 == "N":
+    Ay = Ay
+elif dirA1 == "S":
+    Ay = -Ay
+elif dirA1 == "E":
+    Ax = Ax
+elif dirA1 == "W":
+    Ax = -Ax
+
+
+if dirA2 == "N":
+    Ay = Ay
+elif dirA2 == "S":
+    Ay = -Ay
+elif dirA2 == "E":
+    Ax = Ax
+elif dirA2 == "W":
+    Ax = -Ax
+
+# Find Vx and Vy
+
+Ax = magnitudeA*math.sin(angleA)
+Ay = magnitudeA*math.cos(AngleA)
+
+Bx = magnitudeB*math.cos(AngleB)
+By = magnitudeB*math.cos(AngleB)
+
+# Add x and y components
+
+Rx = Ax + Bx
+Ry = Ay + By
+
+# Find resultant magnitude
+
+magnitudeR = math.sqrt((Rx**2)+(Ry**2))
+
+# Find resultant angle
+
+
+
+
 # Convert Angle to a value between 0 and 360
-
-
 
 # Test recogniton of directions
 if dirA1 == "N":
