@@ -13,8 +13,12 @@ units = str(input("What are the units of magnitude? "))
 angleA = float(input("What is the angle of the first vector in degrees? "))
 dirA1 = str(input("What direction? "))
 dirA2 = str(input("of? "))
+angleB = float(input("What is the angle of the first vector in degrees? "))
+dirB1 = str(input("What direction? "))
+dirB2 = str(input("of? "))
 
 # Convert Angle to a value between 0 and 360
+
 
 
 # Test recogniton of directions
