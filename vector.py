@@ -90,13 +90,13 @@ elif dirA1 == "S" and dirA2 == "E":
     trueangleA = 90+angleA
 elif dirA1 == "S" and dirA2 == "W":
     trueangleA = 270-angleA
-elif dirA1 == "E" and dirA2 == "N"
+elif dirA1 == "E" and dirA2 == "N":
     trueangleA = 0+angleA
-elif dirA1 == "E" and dirA2 == "S"
+elif dirA1 == "E" and dirA2 == "S":
     trueangleA = 180-angleA
-elif dirA1 == "W" and dirA2 == "N"
+elif dirA1 == "W" and dirA2 == "N":
     trueangleA = 360-angleA
-elif dirA1 == "W" and dirA2 == "S"
+elif dirA1 == "W" and dirA2 == "S":
     trueangleA = 180+angleA
 
 if dirB1 == "N" and dirB2 == "E":
@@ -107,12 +107,28 @@ elif dirB1 == "S" and dirB2 == "E":
     trueangleB = 90+angleB
 elif dirB1 == "S" and dirB2 == "W":
     trueangleB = 270-angleB
-elif dirB1 == "E" and dirB2 == "N"
+elif dirB1 == "E" and dirB2 == "N":
     trueangleB = 0+angleB
-elif dirB1 == "E" and dirB2 == "S"
+elif dirB1 == "E" and dirB2 == "S":
     trueangleB = 180-angleB
-elif dirB1 == "W" and dirB2 == "N"
+elif dirB1 == "W" and dirB2 == "N":
     trueangleB = 360-angleB
-elif dirB1 == "W" and dirB2 == "S"
+elif dirB1 == "W" and dirB2 == "S":
     trueangleB = 180+angleB
     
+if Rx >= 0 and Ry >= 0:
+    dirR1 = 'N'
+    dirR2 = 'E'
+elif Rx >= 0 and Ry <=0:
+    dirR1 = 'S'
+    dirR2 = 'E'
+elif Rx <=0 and Ry >=0:
+    dirR1 = 'N'
+    dirR2 = 'W'
+elif Rx <=0 and Ry <=0:
+    dirR1 = 'S'
+    dirR2 = 'W'
+
+AngleR = math.degrees(math.atan(Ry/Rx))
+
+print('The resultant vector is:', magnitudeR, units, dirR1, 'of', dirR2)
