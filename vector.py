@@ -13,43 +13,63 @@ units = str(input("What are the units of magnitude? "))
 angleA = float(input("What is the angle of the first vector in degrees? "))
 dirA1 = str(input("What direction? "))
 dirA2 = str(input("of? "))
-angleB = float(input("What is the angle of the first vector in degrees? "))
+angleB = float(input("What is the angle of the second vector in degrees? "))
 dirB1 = str(input("What direction? "))
 dirB2 = str(input("of? "))
 
 # Convert to radians
 
-radians(angleA)
-radians(angleB)
+radiansA = math.radians(angleA)
+radiansB = math.radians(angleB)
+
+# Find Vx and Vy
+
+Ax = magnitudeA*math.sin(radiansA)
+Ay = magnitudeA*math.cos(radiansA)
+
+Bx = magnitudeB*math.cos(radiansB)
+By = magnitudeB*math.cos(radiansB)
 
 # Convert direction
 
 if dirA1 == "N":
-    Ay = Ay
+    Ay = Ay*1
 elif dirA1 == "S":
-    Ay = -Ay
+    Ay = Ay*-1
 elif dirA1 == "E":
-    Ax = Ax
+    Ax = Ax*1
 elif dirA1 == "W":
-    Ax = -Ax
+    Ax = Ax*-1
 
 
 if dirA2 == "N":
-    Ay = Ay
+    Ay = Ay*1
 elif dirA2 == "S":
-    Ay = -Ay
+    Ay = Ay*-1
 elif dirA2 == "E":
-    Ax = Ax
+    Ax = Ax*1
 elif dirA2 == "W":
-    Ax = -Ax
+    Ax = Ax*-1
 
-# Find Vx and Vy
+if dirB1 == "N":
+    By = By*1
+elif dirB1 == "S":
+    By = By*-1
+elif dirB1 == "E":
+    Bx = Bx*1
+elif dirB1 == "W":
+    Bx = Bx*-1
 
-Ax = magnitudeA*math.sin(angleA)
-Ay = magnitudeA*math.cos(AngleA)
 
-Bx = magnitudeB*math.cos(AngleB)
-By = magnitudeB*math.cos(AngleB)
+if dirB2 == "N":
+    By = By*1
+elif dirB2 == "S":
+    By = By*-1
+elif dirB2 == "E":
+    Bx = Bx*1
+elif dirB2 == "W":
+    Bx = Bx*-1
+
 
 # Add x and y components
 
@@ -60,30 +80,39 @@ Ry = Ay + By
 
 magnitudeR = math.sqrt((Rx**2)+(Ry**2))
 
-# Find resultant angle
-
-
-
-
 # Convert Angle to a value between 0 and 360
 
-# Test recogniton of directions
-if dirA1 == "N":
-    print("north")
-elif dirA1 == "S":
-    print("south")
-elif dirA1 == "E":
-    print("east")
-elif dirA1 == "W":
-    print("west")
+if dirA1 == "N" and dirA2 == "E":
+    trueangleA = 90-angleA
+elif dirA1 == "N" and dirA2 == "W":
+    trueangleA = 270+angleA
+elif dirA1 == "S" and dirA2 == "E":
+    trueangleA = 90+angleA
+elif dirA1 == "S" and dirA2 == "W":
+    trueangleA = 270-angleA
+elif dirA1 == "E" and dirA2 == "N"
+    trueangleA = 0+angleA
+elif dirA1 == "E" and dirA2 == "S"
+    trueangleA = 180-angleA
+elif dirA1 == "W" and dirA2 == "N"
+    trueangleA = 360-angleA
+elif dirA1 == "W" and dirA2 == "S"
+    trueangleA = 180+angleA
 
-print("of")
-
-if dirA2 == "N":
-    print("north")
-elif dirA2 == "S":
-    print("south")
-elif dirA2 == "E":
-    print("east")
-elif dirA2 == "W":
-    print("west")
+if dirB1 == "N" and dirB2 == "E":
+    trueangleB = 90-angleB
+elif dirB1 == "N" and dirB2 == "W":
+    trueangleB = 270+angleB
+elif dirB1 == "S" and dirB2 == "E":
+    trueangleB = 90+angleB
+elif dirB1 == "S" and dirB2 == "W":
+    trueangleB = 270-angleB
+elif dirB1 == "E" and dirB2 == "N"
+    trueangleB = 0+angleB
+elif dirB1 == "E" and dirB2 == "S"
+    trueangleB = 180-angleB
+elif dirB1 == "W" and dirB2 == "N"
+    trueangleB = 360-angleB
+elif dirB1 == "W" and dirB2 == "S"
+    trueangleB = 180+angleB
+    
