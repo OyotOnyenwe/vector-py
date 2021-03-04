@@ -70,7 +70,6 @@ elif dirB2 == "E":
 elif dirB2 == "W":
     Bx = Bx*-1
 
-
 # Add x and y components
 
 Rx = Ax + Bx
@@ -116,6 +115,8 @@ elif dirB1 == "W" and dirB2 == "N":
 elif dirB1 == "W" and dirB2 == "S":
     trueangleB = 180+angleB
     
+# get final direction based on -/+ of resultant 
+
 if Rx >= 0 and Ry >= 0:
     dirR1 = 'N'
     dirR2 = 'E'
@@ -129,6 +130,10 @@ elif Rx <=0 and Ry <=0:
     dirR1 = 'S'
     dirR2 = 'W'
 
+# get angle of the resultant
+
 AngleR = math.degrees(math.atan(Ry/Rx))
+
+# print the results
 
 print('The resultant vector is:', magnitudeR, units, dirR1, 'of', dirR2)
