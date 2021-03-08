@@ -79,42 +79,6 @@ Ry = Ay + By
 
 magnitudeR = math.sqrt((Rx**2)+(Ry**2))
 
-# Convert Angle to a value between 0 and 360
-
-if dirA1 == "N" and dirA2 == "E":
-    trueangleA = 90-angleA
-elif dirA1 == "N" and dirA2 == "W":
-    trueangleA = 270+angleA
-elif dirA1 == "S" and dirA2 == "E":
-    trueangleA = 90+angleA
-elif dirA1 == "S" and dirA2 == "W":
-    trueangleA = 270-angleA
-elif dirA1 == "E" and dirA2 == "N":
-    trueangleA = 0+angleA
-elif dirA1 == "E" and dirA2 == "S":
-    trueangleA = 180-angleA
-elif dirA1 == "W" and dirA2 == "N":
-    trueangleA = 360-angleA
-elif dirA1 == "W" and dirA2 == "S":
-    trueangleA = 180+angleA
-
-if dirB1 == "N" and dirB2 == "E":
-    trueangleB = 90-angleB
-elif dirB1 == "N" and dirB2 == "W":
-    trueangleB = 270+angleB
-elif dirB1 == "S" and dirB2 == "E":
-    trueangleB = 90+angleB
-elif dirB1 == "S" and dirB2 == "W":
-    trueangleB = 270-angleB
-elif dirB1 == "E" and dirB2 == "N":
-    trueangleB = 0+angleB
-elif dirB1 == "E" and dirB2 == "S":
-    trueangleB = 180-angleB
-elif dirB1 == "W" and dirB2 == "N":
-    trueangleB = 360-angleB
-elif dirB1 == "W" and dirB2 == "S":
-    trueangleB = 180+angleB
-    
 # get final direction based on -/+ of resultant 
 
 if Rx >= 0 and Ry >= 0:
