@@ -100,4 +100,4 @@ AngleR = math.degrees(math.atan(Ry/Rx))
 
 # print the results
 
-print('The resultant vector is:', magnitudeR, units, dirR1, 'of', dirR2)
+print('The resultant vector is:', magnitudeR, units, '@', AngleR, '°', dirR1, 'of', dirR2)
