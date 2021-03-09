@@ -98,6 +98,12 @@ elif Rx <=0 and Ry <=0:
 
 AngleR = math.degrees(math.atan(Ry/Rx))
 
+# format the results for output
+
+magnitudeR = round(magnitudeR, 3)
+AngleR = abs(round(AngleR, 3))
+
+
 # print the results
 
 print('The resultant vector is:', magnitudeR, units, '@', AngleR, '°', dirR1, 'of', dirR2)
