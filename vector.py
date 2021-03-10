@@ -27,7 +27,7 @@ radiansB = math.radians(angleB)
 Ax = magnitudeA*math.sin(radiansA)
 Ay = magnitudeA*math.cos(radiansA)
 
-Bx = magnitudeB*math.cos(radiansB)
+Bx = magnitudeB*math.sin(radiansB)
 By = magnitudeB*math.cos(radiansB)
 
 # Convert direction
